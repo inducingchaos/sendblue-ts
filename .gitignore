@@ -1,0 +1,40 @@
+# @file Prevents sensitive or unwanted files from being committed to source control.
+# @author Riley Barabash <riley@rileybarabash.com>
+# @see https://help.github.com/articles/ignoring-files/
+
+# SEC: Environment
+
+# TIP: Committing .env files to git is bad practice and not recommended. Only commit a env.example file.
+
+.env
+.env*.local
+
+# SEC: Dependencies
+
+node_modules
+.pnp
+.pnp.js
+
+# SEC: Debug
+
+npm-debug.log*
+.pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# SEC: Testing
+
+coverage
+test.ts
+
+# SEC: Build
+
+*.tsbuildinfo
+.build
+dist
+out
+
+# SEC: Miscellaneous
+
+.DS_Store
+*.pem

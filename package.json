@@ -1,0 +1,50 @@
+{
+    "name": "@rileybarabash/sendblue-ts",
+    "version": "0.1.1",
+    "description": "A Typescript Node.js wrapper for the Sendblue API, a service for seamlessly integrating your apps with iMessage.",
+    "keywords": [
+        "sendblue",
+        "sms",
+        "imessage",
+        "messaging",
+        "twilio",
+        "apple",
+        "node",
+        "nodejs",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "author": "Riley Barabash",
+    "homepage": "https://sendblue.co",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rileybarabash/sendblue-ts.git"
+    },
+    "license": "ISC",
+    "scripts": {
+        "build": "rm -rf ./dist && tsc --project ./tsconfig.json && tsc-alias --project ./tsconfig.json",
+        "use": "sh -c 'IFS=\"\" tsx ./src/scripts/\"$*\".ts' sh",
+        "x": "sh -c 'IFS=\"\" node ./dist/scripts/bin/\"$*\".js' sh",
+        "git": "sh -c 'pnpm build && git add --all && git commit \"$@\" && git push --force' sh",
+        "undo-git": "git reset --soft HEAD^",
+        "redo-git": "git reset --soft HEAD",
+        "re-git": "pnpm build && git add --all && git commit --amend --no-edit && git push --force",
+        "re-git-edit": "sh -c 'pnpm build && git add --all && git commit --amend \"$@\" && git push --force' sh"
+    },
+    "bin": {},
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "devDependencies": {
+        "@types/node": "^20.10.7",
+        "prettier": "^3.1.1",
+        "tsc-alias": "^1.8.8",
+        "tsx": "^4.7.0",
+        "typescript": "^5.3.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "type": "module"
+}
