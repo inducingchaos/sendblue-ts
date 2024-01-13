@@ -1,5 +1,6 @@
 /* @file The default Typescript configuration. */
 /* @author Riley Barabash <riley@rileybarabash.com> */
+/* */
 /* @see https://www.typescriptlang.org/tsconfig */
 
 {
@@ -38,9 +39,9 @@
 
         /* Language and Environment */
 
-        "lib": ["ES2022"],
+        "lib": ["ESNext"],
         "moduleDetection": "force",
-        "target": "ES2022",
+        "target": "ESNext",
 
         /* Completeness */
 
